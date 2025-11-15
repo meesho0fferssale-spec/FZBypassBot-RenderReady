@@ -3,15 +3,18 @@ from time import time
 from dotenv import load_dotenv
 from pyrogram import Client
 from pyrogram.enums import ParseMode
-from logging import getLogger, FileHandler, StreamHandler, INFO, ERROR, basicConfig
-try:
-    
+from logging import getLogger, FileHandler, StreamHandler, ERROR
+
+# Remove uvloop completely — do not import or use it
+
+# Disable Pyrogram logs
 getLogger("pyrogram").setLevel(ERROR)
 LOGGER = getLogger(__name__)
 
+# Load environment file (optional)
 load_dotenv("config.env", override=True)
-BOT_START = time()
 
+BOT_START = time()
 
 class Config:
     BOT_TOKEN = getenv("BOT_TOKEN", "")
