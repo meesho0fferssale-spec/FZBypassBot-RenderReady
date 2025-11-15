@@ -6,8 +6,6 @@ from pyrogram.enums import ParseMode
 from logging import getLogger, FileHandler, StreamHandler, INFO, ERROR, basicConfig
 try:
     
-)
-
 getLogger("pyrogram").setLevel(ERROR)
 LOGGER = getLogger(__name__)
 
