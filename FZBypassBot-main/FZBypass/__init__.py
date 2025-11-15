@@ -5,11 +5,11 @@ from pyrogram import Client
 from pyrogram.enums import ParseMode
 from logging import getLogger, FileHandler, StreamHandler, INFO, ERROR, basicConfig
 try:
-    from uvloop import install
+    from import install
     install()
-    print('uvloop active')
+    print('active')
 except:
-    print('uvloop not supported')
+    print(' not supported')
 basicConfig(
     format="[%(asctime)s] [%(levelname)s] - %(message)s",  #  [%(filename)s:%(lineno)d]
     datefmt="%d-%b-%y %I:%M:%S %p",
